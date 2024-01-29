@@ -3,10 +3,8 @@
 
 ## 1- Install relevant libraries :
 ```r
-pip install -r installed_modules.txt
+pip install -r requirements.txt
 ```
-Parameters:
-DataName : `Top` for SIS top-side dataset and `Bot` SIS bottom-side dataset
 
 ## 2- Run TPE experiment:
 
