@@ -1,0 +1,185 @@
+Defect database: D:\OneDrive - Tata Steel Europe Ltd\Projects\NWO-projects\2019 ECOLE EID Univ-Leiden\HSM2-classifier\LIACS-TS-exp_20220901\Bottom\ASIS_bot_exp.bdc
+Classification file: (null)
+
+
+Confusion matrixes - First stage:
+
+Classifier 0 :
+
+  Method:CLS - Closest sphere
+  Rejection threshold:  30%
+
+  Real class x 1st stage result
+
+             ONB    AFDW   BLRND    KRAS   KROVN     OHV   OXGRF   OXOVR   OXSLB   TIGST   WALSV   WATER    VORM    RAND  OORTJE     LUS   KLVLK    WHPS    BLPS   TOTAL   Perf.
+
+AFDW                  53                                                                                                       1                       7      11      72
+                                                                                                                                                                       4%     74%
+
+BLRND                          9               3                                                       2                       2                       1       4      21
+                                                                                                                                                                       1%     43%
+
+KRAS           1                      13                                                                               1                                              15
+                                                                                                                                                                       1%     87%
+
+KROVN                          2              35                                                       1                       2                       1       1      42
+                                                                                                                                                                       2%     83%
+
+OHV                            2                      18                                                                                                       7      27
+                                                                                                                                                                       1%     67%
+
+OXGRF                          1                              29                                       1                                                       6      37
+                                                                                                                                                                       2%     78%
+
+OXOVR          1                               1               2      50       5                                                                       6      15      80
+                                                                                                                                                                       4%     63%
+
+OXSLB                                                                  6      28       1               1                                               2       5      43
+                                                                                                                                                                       2%     65%
+
+TIGST                                  1                               2       2      83              27                                               1      22     138
+                                                                                                                                                                       7%     60%
+
+WALSV                                                                                         25               1               1                               1      28
+                                                                                                                                                                       1%     89%
+
+WATER                          1               1       2               1       1      24             391               1                               1      11     434
+                                                                                                                                                                      21%     90%
+
+VORM                                                                                           1             140                      21                       2     164
+                                                                                                                                                                       8%     85%
+
+RAND           2       1       1       4               1               1               2               2              14                                       5      33
+                                                                                                                                                                       2%     42%
+
+OORTJE         1       1       1               6                                       1       1               4              17               3       2       5      42
+                                                                                                                                                                       2%     40%
+
+LUS                                                                                                           24                      27                              51
+                                                                                                                                                                       3%     53%
+
+KLVLK                                                          1                                                               1              68               5      75
+                                                                                                                                                                       4%     91%
+
+WHPS                   4                                               3       3       4               1                                       3     112      16     146
+                                                                                                                                                                       7%     77%
+
+BLPS           7      22       3               1       7      13      19       4      18              17       2       3       4              10       8     444     582
+                                                                                                                                                                      29%     76%
+
+TOTAL         12      81      20      18      47      28      45      82      43     133      27     443     171      19      28      48      84     141     560    2030
+               1%      4%      1%      1%      2%      1%      2%      4%      2%      7%      1%     22%      8%      1%      1%      2%      4%      7%     28%    100%
+Confidence      0%     65%     45%     72%     74%     64%     64%     61%     65%     62%     93%     88%     82%     74%     61%     56%     81%     79%     79%
+
+Good classification score: 76.7%
+
+Global confusion matrix - All classifiers merged:
+
+  Real class x 1st stage result
+
+             ONB    AFDW   BLRND    KRAS   KROVN     OHV   OXGRF   OXOVR   OXSLB   TIGST   WALSV   WATER    VORM    RAND  OORTJE     LUS   KLVLK    WHPS    BLPS   TOTAL   Perf.
+
+AFDW                  53                                                                                                       1                       7      11      72
+                                                                                                                                                                       4%     74%
+
+BLRND                          9               3                                                       2                       2                       1       4      21
+                                                                                                                                                                       1%     43%
+
+KRAS           1                      13                                                                               1                                              15
+                                                                                                                                                                       1%     87%
+
+KROVN                          2              35                                                       1                       2                       1       1      42
+                                                                                                                                                                       2%     83%
+
+OHV                            2                      18                                                                                                       7      27
+                                                                                                                                                                       1%     67%
+
+OXGRF                          1                              29                                       1                                                       6      37
+                                                                                                                                                                       2%     78%
+
+OXOVR          1                               1               2      50       5                                                                       6      15      80
+                                                                                                                                                                       4%     63%
+
+OXSLB                                                                  6      28       1               1                                               2       5      43
+                                                                                                                                                                       2%     65%
+
+TIGST                                  1                               2       2      83              27                                               1      22     138
+                                                                                                                                                                       7%     60%
+
+WALSV                                                                                         25               1               1                               1      28
+                                                                                                                                                                       1%     89%
+
+WATER                          1               1       2               1       1      24             391               1                               1      11     434
+                                                                                                                                                                      21%     90%
+
+VORM                                                                                           1             140                      21                       2     164
+                                                                                                                                                                       8%     85%
+
+RAND           2       1       1       4               1               1               2               2              14                                       5      33
+                                                                                                                                                                       2%     42%
+
+OORTJE         1       1       1               6                                       1       1               4              17               3       2       5      42
+                                                                                                                                                                       2%     40%
+
+LUS                                                                                                           24                      27                              51
+                                                                                                                                                                       3%     53%
+
+KLVLK                                                          1                                                               1              68               5      75
+                                                                                                                                                                       4%     91%
+
+WHPS                   4                                               3       3       4               1                                       3     112      16     146
+                                                                                                                                                                       7%     77%
+
+BLPS           7      22       3               1       7      13      19       4      18              17       2       3       4              10       8     444     582
+                                                                                                                                                                      29%     76%
+
+TOTAL         12      81      20      18      47      28      45      82      43     133      27     443     171      19      28      48      84     141     560    2030
+               1%      4%      1%      1%      2%      1%      2%      4%      2%      7%      1%     22%      8%      1%      1%      2%      4%      7%     28%    100%
+Confidence      0%     65%     45%     72%     74%     64%     64%     61%     65%     62%     93%     88%     82%     74%     61%     56%     81%     79%     79%
+
+Good classification score: 76.7%
+
+
+Rejection matrixes - First stage:
+
+
+
+Classifier 0 :
+
+CLS - Closest sphere:
+Reject thr.    0%    10%    20%    30%    40%    50%    60%    70%    80%    90%   100%  
+Good classif  76.9%  76.8%  76.8%  76.7%  74.4%  66.3%  49.0%  31.4%  19.4%  12.3%   7.6%
+Unknown        0.0%   0.2%   0.2%   0.6%   4.0%  18.9%  44.7%  66.7%  79.8%  87.4%  92.2%
+Bad classif.  23.1%  23.0%  23.0%  22.8%  21.5%  14.9%   6.4%   1.9%   0.8%   0.3%   0.2%
+
+CLN - Closest neighbour:
+Reject thr.    0%    10%    20%    30%    40%    50%    60%    70%    80%    90%   100%  
+Good classif  74.8%  74.7%  74.6%  73.7%  68.3%  55.5%  40.2%  26.5%  17.0%  11.1%   7.6%
+Unknown        0.0%   0.2%   0.6%   2.5%  12.3%  32.4%  55.1%  71.7%  82.2%  88.6%  92.2%
+Bad classif.  25.2%  25.1%  24.8%  23.8%  19.5%  12.1%   4.7%   1.8%   0.7%   0.3%   0.2%
+
+GRA - Greatest attraction:
+Reject thr.    0%    10%    20%    30%    40%    50%    60%    70%    80%    90%   100%  
+Good classif  77.5%  77.4%  77.4%  77.3%  76.4%  69.9%  51.5%  32.0%  19.5%  12.3%   7.6%
+Unknown        0.0%   0.2%   0.2%   0.4%   1.9%  13.7%  41.5%  66.0%  79.8%  87.4%  92.2%
+Bad classif.  22.5%  22.4%  22.4%  22.2%  21.8%  16.5%   7.0%   2.0%   0.8%   0.3%   0.2%
+
+All classifiers merged:
+
+CLS - Closest sphere:
+Reject thr.    0%    10%    20%    30%    40%    50%    60%    70%    80%    90%   100%  
+Good classif  76.9%  76.8%  76.8%  76.7%  74.4%  66.3%  49.0%  31.4%  19.4%  12.3%   7.6%
+Unknown        0.0%   0.2%   0.2%   0.6%   4.0%  18.9%  44.7%  66.7%  79.8%  87.4%  92.2%
+Bad classif.  23.1%  23.0%  23.0%  22.8%  21.5%  14.9%   6.4%   1.9%   0.8%   0.3%   0.2%
+
+CLN - Closest neighbour:
+Reject thr.    0%    10%    20%    30%    40%    50%    60%    70%    80%    90%   100%  
+Good classif  74.8%  74.7%  74.6%  73.7%  68.3%  55.5%  40.2%  26.5%  17.0%  11.1%   7.6%
+Unknown        0.0%   0.2%   0.6%   2.5%  12.3%  32.4%  55.1%  71.7%  82.2%  88.6%  92.2%
+Bad classif.  25.2%  25.1%  24.8%  23.8%  19.5%  12.1%   4.7%   1.8%   0.7%   0.3%   0.2%
+
+GRA - Greatest attraction:
+Reject thr.    0%    10%    20%    30%    40%    50%    60%    70%    80%    90%   100%  
+Good classif  77.5%  77.4%  77.4%  77.3%  76.4%  69.9%  51.5%  32.0%  19.5%  12.3%   7.6%
+Unknown        0.0%   0.2%   0.2%   0.4%   1.9%  13.7%  41.5%  66.0%  79.8%  87.4%  92.2%
+Bad classif.  22.5%  22.4%  22.4%  22.2%  21.8%  16.5%   7.0%   2.0%   0.8%   0.3%   0.2%
