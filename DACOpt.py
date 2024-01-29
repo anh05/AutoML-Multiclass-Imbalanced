@@ -465,13 +465,6 @@ def fscore(params_org):
                 {'time_module': pickle.dumps(time.time)}
            }   
 
-
-# In[6]:
-
-
-
-#trainIDs='./REAL/'+dataName+'-exp'+str(seed)+'/20220901_ASIS_'+dataName+'_exp'+str(seed)+'_learn.txt'
-#testIDs='./REAL/'+dataName+'-exp'+str(seed)+'/20220901_ASIS_'+dataName+'_exp'+str(seed)+'_test.txt'
 data=pd.read_csv(file,index_col=0, low_memory=False)
 enc = LabelEncoder()
 #######LOAD TRAIN DATA######
@@ -495,10 +488,6 @@ X = StandardScaler().fit_transform(X)
 X = np.c_[X]    '''
 labelname = sorted(list(set(data['NOCLASSE'])))
 
-
-# In[7]:
-
-
 def fscore1(param):
     print(param)
     return {'loss': -np.random.uniform(0,1),'status': STATUS_OK,}
@@ -512,17 +501,9 @@ resampler_group={'NO':'NO','SMOTE':'OVER','BorderlineSMOTE':'OVER','SMOTENC':'OV
                             'TomekLinks':'UNDER','ClusterCentroids':'UNDER'}
 BIG_VALUE =-1
 
-
-# In[8]:
-
-
-
-#for compare_strategy in ['stat','highest']:#,'rank','mean','medium']:  
 if 1==1:
     for randomstate in seeds:  
         print('\033[91m',HPOalg,'==Random Seed:',randomstate,'=== START DATASET: ', dataset, '=======', '\033[0m')
-        #sample_sp=1 if n_init_sample==20 else None
-        #print('0.25 n_init_sample: ',n_init_sample,' - n_EI_candidates',n_EI_candidates)
         best,params_best,_bestBefore = 0,'',''     
         iid = 0
         errorcount=0
