@@ -161,34 +161,13 @@ def get_sp(randomstate,n_init_sample, isMax=True):
     l1_ratio=FloatParam([1e-09, 1], 'l1_ratio')
     search_space.add_multiparameter([C_lr,penalty_solver,tol_lr,l1_ratio])
     con.addMutilConditional([C_lr,penalty_solver,tol_lr,l1_ratio],alg_namestr,'LR')
-    smo_type=AlgorithmChoice([['NO'],['SMOTE','BorderlineSMOTE','SMOTENC','SVMSMOTE','KMeansSMOTE','ADASYN','RandomOverSampler']
-                              ,['SMOTEENN','SMOTETomek'],
-                              ['CondensedNearestNeighbour','EditedNearestNeighbours','RepeatedEditedNearestNeighbours','AllKNN',
-                              'InstanceHardnessThreshold','NearMiss','NeighbourhoodCleaningRule',
-                               'OneSidedSelection','RandomUnderSampler','TomekLinks','ClusterCentroids']],'resampler')
-    if n_init_sample==50 and isMax==True:
-            smo_type=AlgorithmChoice([[['ClusterCentroids'],['NearMiss','RandomUnderSampler'],
+    smo_type=AlgorithmChoice([[['ClusterCentroids'],['NearMiss','RandomUnderSampler'],
                                   [['CondensedNearestNeighbour','NeighbourhoodCleaningRule'],
                                   ['EditedNearestNeighbours','RepeatedEditedNearestNeighbours','AllKNN'],
                                   ['TomekLinks'],['OneSidedSelection'],['InstanceHardnessThreshold']]],
                                  [['NO'],['SMOTEENN','SMOTETomek'],[['RandomOverSampler'],['ADASYN'],
                                                                     ['SMOTE','SMOTENC','SMOTEN','BorderlineSMOTE',
                                                                      'KMeansSMOTE','SVMSMOTE']]]],'resampler')
-
-    elif n_init_sample==51 and isMax==True:
-        smo_type=AlgorithmChoice([['NO'],['SMOTE','KMeansSMOTE','BorderlineSMOTE'],['SMOTENC','SMOTEN','SVMSMOTE'],
-                              ['RandomOverSampler','ADASYN'],['SMOTEENN','SMOTETomek'],
-                              ['NearMiss','InstanceHardnessThreshold'],['TomekLinks','ClusterCentroids'],
-                              ['EditedNearestNeighbours','RepeatedEditedNearestNeighbours'],['NeighbourhoodCleaningRule','AllKNN'],
-                              ['OneSidedSelection','CondensedNearestNeighbour','RandomUnderSampler']],'resampler')
-    elif n_init_sample==100 and isMax==True:
-        smo_type=AlgorithmChoice(['SMOTE','BorderlineSMOTE','SMOTENC','SVMSMOTE','KMeansSMOTE','ADASYN'
-                              ,'NO','SMOTEENN','SMOTETomek','NearMiss','InstanceHardnessThreshold','TomekLinks','ClusterCentroids',
-                              'EditedNearestNeighbours','RepeatedEditedNearestNeighbours','NeighbourhoodCleaningRule',
-                               'AllKNN','OneSidedSelection','CondensedNearestNeighbour',
-                                  ['RandomUnderSampler','RandomOverSampler']],'resampler')
-    else:
-        pass
     search_space._add_singleparameter(smo_type)
     k_neighbors_SMOTE=IntegerParam([1,10],'k_neighbors_SMOTE')
     k_neighbors_Borderline=IntegerParam([1,10],'k_neighbors_Borderline')
@@ -256,21 +235,6 @@ def get_sp(randomstate,n_init_sample, isMax=True):
     con.addMutilConditional([replacement,under_strategy], smo_type,'RandomUnderSampler')
     con.addConditional(under_strategy, smo_type,'TomekLinks')
     return search_space, con
-
-
-# In[4]:
-
-
-'''[['NO'],['SMOTEENN','SMOTETomek'],
-                              [['SMOTE',['SMOTENC','SMOTEN'],['BorderlineSMOTE','KMeansSMOTE','SVMSMOTE']],
-                              'RandomOverSampler','ADASYN'],
-                              [['ClusterCentroids'],['NearMiss','RandomUnderSampler'],
-                               [['TomekLinks','OneSidedSelection'],'InstanceHardnessThreshold',
-                              ['EditedNearestNeighbours','RepeatedEditedNearestNeighbours','AllKNN'],
-                                ['CondensedNearestNeighbour','NeighbourhoodCleaningRule']]]],'resampler')'''
-
-
-# In[5]:
 
 
 def fscore(params_org):
