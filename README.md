@@ -6,7 +6,7 @@
 pip install -r requirements.txt
 ```
 
-## 2- Run TPE experiment:
+## 2- Run experiment:
 
 ```r
 python [Optimization algorithm] [DataName] [seed] [Performance metric] [Classification Strategy] [Test Case]
